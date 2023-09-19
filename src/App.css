@@ -1,0 +1,69 @@
+@import 'react-toastify/dist/ReactToastify.css';
+
+/* Loader */
+.grandizer-loader {
+    --height-of-loader: 4px;
+    --loader-color: #4338ca;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+  }
+   
+  .grandizer-loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+  }
+   
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
+
+  .grandizer-top-loader {
+    --height-of-loader: 2px;
+    --loader-color: #FFF;
+    height: var(--height-of-loader);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+   
+  .grandizer-top-loader::before {
+    content: "";
+    position: absolute;
+    background: #86198f;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    animation: moving 1s ease-in-out infinite;
+  }
+   
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
+  /* /Loader */

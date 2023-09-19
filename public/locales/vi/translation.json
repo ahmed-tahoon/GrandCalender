@@ -1,0 +1,11 @@
+{
+    "your_profile": "Hồ sơ của bạn",
+    "account_settings": "Account Settings",
+    "integrations": "Integrations",
+    "terms_and_conditions": "Chính sách và điều khoản",
+    "privacy_policy": "Chính sách bảo mật",
+    "description": {
+      "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+      "part2": "Switch language between english and german using buttons above."
+    }
+  }

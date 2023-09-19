@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* START - Reset */
+.react-select__control [type="text"]:focus,
+.react-select__control [type="email"]:focus,
+.react-select__control [type="url"]:focus,
+.react-select__control [type="password"]:focus,
+.react-select__control [type="number"]:focus,
+.react-select__control [type="date"]:focus,
+.react-select__control [type="datetime-local"]:focus,
+.react-select__control [type="month"]:focus,
+.react-select__control [type="search"]:focus,
+.react-select__control [type="tel"]:focus,
+.react-select__control [type="time"]:focus,
+.react-select__control [type="week"]:focus {
+    box-shadow: none !important;
+}
+
+.react-select__control,
+.react-select__menu {
+    font-size: 13px;
+}
+/* END - Reset */
+
+/* START - Components */
+@layer components {
+    .g-default-btn-sm {
+        @apply inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-0;
+    }
+
+    .g-primary-btn-sm {
+        @apply inline-flex items-center rounded border border-transparent bg-grandkit-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-grandkit-700 focus:outline-none focus:ring-2 focus:ring-grandkit-500 focus:ring-offset-2;
+    }
+
+    .g-primary-btn {
+        @apply inline-flex items-center rounded-md border border-transparent bg-grandkit-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-grandkit-700 focus:outline-none focus:ring-2 focus:ring-grandkit-500 focus:ring-offset-2;
+    }
+
+    .g-icon-btn {
+        @apply rounded-full bg-transparent p-1 text-white hover:shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-grandkit-600 text-grandkit-600;
+    }
+
+    .g-helptext-color {
+        @apply text-gray-600;
+    }
+
+    .g-primary-btn-transparent {
+        @apply inline-flex items-center rounded-md border border-transparent px-2.5 py-1.5 text-sm font-medium text-grandkit-600 hover:bg-gray-100 focus:outline-none whitespace-nowrap
+    }
+}
+/* END - Components */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #section-to-print,
+    #section-to-print * {
+        visibility: visible;
+        print-color-adjust: exact;
+        /* Table */
+        -webkit-print-color-adjust: exact;
+        /* Safari */
+        -moz-print-color-adjust: exact;
+        /* Table col  */
+    }
+
+    #section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* Fullcalendar  */
+:root {
+    /* --fc-small-font-size: .85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+    --fc-neutral-text-color: #808080;
+    --fc-border-color: #ddd; */
+
+    /* Grandkit */
+    --fc-button-text-color: #67136e;
+    --fc-button-bg-color: #fff;
+    --fc-button-border-color: #fff;
+    /* Gray 100 */
+    --fc-button-hover-bg-color: rgb(243 244 246);
+    --fc-button-hover-border-color: rgb(243 244 246);
+    --fc-button-active-bg-color: #fff;
+    --fc-button-active-border-color: #67136e;
+
+    /* --fc-event-bg-color: #3788d8;
+    --fc-event-border-color: #3788d8;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+    --fc-now-indicator-color: red; */
+  }
+
+.calendar-view .fc-button:focus {
+    box-shadow: none !important;
+}
+.calendar-view .fc-button:active {
+    border: none;
+}
+
+.calendar-view .fc-button-active {
+    @apply border-b-2 border-grandkit-600 border-t-0 border-l-0 border-r-0 rounded-none;
+}
